@@ -47,9 +47,10 @@ For simplicity, we can use JWT (JSON Web Token) for authentication. The client s
 Deliverable:
 Briefly describe a strategy for creating a CI-CD pipeline for the API created in earlier tasks.
 
-I've implemented this via AWS CDK ([Link](https://github.com/RizaHKhan/cdk-for-laravel-deployment/blob/master/lib/constructs/pipeline.ts) to a another repository of mine which pushes sets up a Laravel application on an EC2 via Pipelines).
+I've implemented this using AWS CDK. See [this repository](https://github.com/RizaHKhan/cdk-for-laravel-deployment/blob/master/lib/constructs/pipeline.ts) for an example that sets up a Laravel application on an EC2 instance via Pipelines.
 
-1. Creates a artifact in S3
-2. Runs tests (theoretically, I didn't write tests in the above example)
-3. Uses AWS agent to write to the EC2 instane
+The pipeline performs the following steps:
 
+- Creates an artifact in S3
+- Runs tests (note: tests are not implemented in the linked example)
+- Uses an AWS agent to deploy to the EC2 instance
