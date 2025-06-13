@@ -6,6 +6,14 @@
 
 A `rest.http` file showcases the requests available from the server.
 
+```http
+
+GET http://localhost:3000/GetTypes?types=Emails,Chats,Sms
+authorization: Bearer 123
+accept: application/json
+content-type: application/json
+```
+
 ## Tasks
 
 ### Task 1 – Parsing
@@ -17,6 +25,10 @@ Deliverable:
 
 > Follow-up question:
 > ** Briefly describe how you would approach designing and implementing a database to store your model. **
+
+In order to best design a database it would be important to understand how the data will be used. If the messages need to be segregated (and used by type) then it makes sense to create new tables for each type of message (more or less how they are presented in the resources folder).
+
+If type is not important, I would create one table for the message text (and other common data) and create a junction table connecting that message to its type/owner/etc.
 
 ### Task 2 - Serving
 
