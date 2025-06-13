@@ -15,7 +15,7 @@ Deliverable:
 [x] Fully functional Web API.
 [x] It should integrate the parsing component from task one.
 
-Optional:
-** Describe an authentication strategy that could be added to the TimeFilter endpoint **
+> Optional:
+> ** Describe an authentication strategy that could be added to the TimeFilter endpoint **
 
 We could use a number of methods, but for the sake of simplicity use JWT (JSON Web Token). The headers would include `Authorization: Bearer ...` which can be assessed by a middleware on the server.
