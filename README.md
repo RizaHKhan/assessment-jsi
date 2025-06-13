@@ -14,6 +14,63 @@ accept: application/json
 content-type: application/json
 ```
 
+Response
+```json
+{
+  "Emails": [
+    {
+      "From": "alice@email.com",
+      "To": "bob@email.com,charles@email.com",
+      "Cc": "",
+      "Bcc": "",
+      "DateTime": "2021-01-01T11:00",
+      "Subject": "Hello",
+      "Body": "How are you guys?"
+    },
+    {
+      "From": "bob@email.com",
+      "To": "alice@email.com,charles@email.com",
+      "Cc": "",
+      "Bcc": "",
+      "DateTime": "2021-01-01T11:05",
+      "Subject": "Hey",
+      "Body": "I'm fine I hope to meet with you guys today!?"
+    }
+  ],
+  "Chats": [
+    {
+      "Application": "Facebook",
+      "From": "john@yahoo.com",
+      "To": "Susan Smith",
+      "DateTime": "2021-01-01T09:00",
+      "Text": "Hi did you call me earlier?"
+    },
+    {
+      "Application": "WhatsApp",
+      "From": "6135557777",
+      "To": "6135556666",
+      "DateTime": "2021-01-01T09:01",
+      "Text": "Let's go see a movie in the weekend?!"
+    }
+  ],
+  "Sms": [
+    {
+      "From": "6135556666",
+      "To": "6135557777",
+      "DateTime": "2021-01-01T10:00",
+      "Text": "Hello how are you?"
+    },
+    {
+      "From": "6135557777",
+      "To": "6135556666",
+      "DateTime": "2021-01-01T10:01",
+      "Text": "I'm fine thanks! Yourself?"
+    }
+  ]
+}
+
+```
+
 ## Tasks
 
 ### Task 1 – Parsing
