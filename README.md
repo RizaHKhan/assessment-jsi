@@ -4,7 +4,7 @@
 
 `docker compose up -d --build`
 
-A `rest.http` file showcases the requests available from the server.
+A `rest.http` file showcases the requests available from the server. The server will be available on port 3000.
 
 ```http
 
