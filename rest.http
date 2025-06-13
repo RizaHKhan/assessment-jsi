@@ -9,7 +9,7 @@ content-type: application/json
 
 ###
 
-# @name GetTypes
+# @name TimeFilter
 
 POST http://localhost:3000/TimeFilter
 authorization: Bearer 123
