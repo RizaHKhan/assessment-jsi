@@ -1,6 +1,7 @@
 ###
 
 # @name GetTypes
+# @descrition Get the types of data available in the system.
 
 GET http://localhost:3000/GetTypes?types=Emails,Chats,Sms
 authorization: Bearer 123
@@ -10,6 +11,7 @@ content-type: application/json
 ###
 
 # @name TimeFilter
+# @description Filter data based on time range and types.
 
 POST http://localhost:3000/TimeFilter
 authorization: Bearer 123
