@@ -3,6 +3,7 @@
 # @name GetTypes
 
 GET http://localhost:3000/GetTypes?types=Emails,Chats,Sms
+authorization: Bearer 123
 accept: application/json
 content-type: application/json
 
@@ -11,6 +12,7 @@ content-type: application/json
 # @name GetTypes
 
 POST http://localhost:3000/TimeFilter
+authorization: Bearer 123
 accept: application/json
 content-type: application/json
 

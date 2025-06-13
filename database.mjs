@@ -4,16 +4,19 @@ import path from 'path'
 export default class Database {
     data = {}
 
-    constructor() {
-        const resourcesDir = path.join('./resources')
-        const files = fs.readdirSync(resourcesDir)
+    constructor({
+        fsModule = fs,
+        pathModule = path,
+        resourcesDir = './resources',
+    } = {}) {
+        const files = fsModule.readdirSync(resourcesDir)
         this.data = {}
 
         files.forEach((file) => {
             if (file.endsWith('.txt')) {
-                const type = path.basename(file, '.txt')
-                const content = fs.readFileSync(
-                    path.join(resourcesDir, file),
+                const type = pathModule.basename(file, '.txt')
+                const content = fsModule.readFileSync(
+                    pathModule.join(resourcesDir, file),
                     'utf8',
                 )
                 const lines = content.trim().split('\n')
@@ -52,11 +55,9 @@ export default class Database {
 
     byTypes(types) {
         const responseObject = {}
-
         types.forEach((type) => {
             responseObject[type] = this.data[type]
         })
-
         return responseObject
     }
 
@@ -64,7 +65,6 @@ export default class Database {
         const fromTime = new Date(from)
         const toTime = new Date(to)
         const responseObject = {}
-
         types.forEach((type) => {
             if (!this.data[type]) return
             responseObject[type] = this.data[type].filter(({ DateTime }) => {
@@ -72,7 +72,6 @@ export default class Database {
                 return time >= fromTime && time <= toTime
             })
         })
-
         return responseObject
     }
 }
