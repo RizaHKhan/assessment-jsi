@@ -6,8 +6,8 @@ Deliverable:
 - [x] Functional and tested code that can parse and store data read from files.
 - [x] The parsing should occur on startup of the Web API so it can be consumed later.
 
-Follow-up question:
-** Briefly describe how you would approach designing and implementing a database to store your model. **
+> Follow-up question:
+> ** Briefly describe how you would approach designing and implementing a database to store your model. **
 
 # Task 2 - Serving
 
