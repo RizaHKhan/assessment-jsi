@@ -1,0 +1,21 @@
+###
+
+# @name GetTypes
+
+GET http://localhost:3000/GetTypes?types=Emails,Chats,Sms
+accept: application/json
+content-type: application/json
+
+###
+
+# @name GetTypes
+
+POST http://localhost:3000/TimeFilter
+accept: application/json
+content-type: application/json
+
+{
+  "DataTypes":[ "Chats", "Emails", "Sms" ],
+  "FromTime":"2021-01-01T09:00",
+  "ToTime":"2021-01-27T10:00"
+}
