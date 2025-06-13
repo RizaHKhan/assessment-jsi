@@ -47,10 +47,8 @@ For simplicity, we can use JWT (JSON Web Token) for authentication. The client s
 Deliverable:
 Briefly describe a strategy for creating a CI-CD pipeline for the API created in earlier tasks.
 
+1. Since this is a containerized application, we can use AWS Fargate for hosting. 
+2. We would implement a pipeline on a Github account which will listen for pushes to specific branches (ie, `master`, `dev`)
+3. Depending on the branch, the pipeline will build and write to the Fargate task
+
 I've implemented this using AWS CDK. See [this repository](https://github.com/RizaHKhan/cdk-for-laravel-deployment/blob/master/lib/constructs/pipeline.ts) for an example that sets up a Laravel application on an EC2 instance via Pipelines.
-
-The pipeline performs the following steps:
-
-- Creates an artifact in S3
-- Runs tests (note: tests are not implemented in the linked example)
-- Uses an AWS agent to deploy to the EC2 instance
