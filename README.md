@@ -1,6 +1,14 @@
 # Assessment
 
-## Task 1 – Parsing
+## Installation
+
+`docker compose up -d --build`
+
+A `rest.http` file showcases the requests available from the server.
+
+## Tasks
+
+### Task 1 – Parsing
 
 Deliverable:
 
@@ -10,7 +18,7 @@ Deliverable:
 > Follow-up question:
 > ** Briefly describe how you would approach designing and implementing a database to store your model. **
 
-# Task 2 - Serving
+### Task 2 - Serving
 
 Deliverable:
 
