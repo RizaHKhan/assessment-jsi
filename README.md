@@ -41,3 +41,15 @@ Deliverable:
 > ** Describe an authentication strategy that could be added to the TimeFilter endpoint **
 
 For simplicity, we can use JWT (JSON Web Token) for authentication. The client should include an `Authorization: Bearer ...` header, which the server middleware can validate.
+
+### Task 3 – Continuous Integration and continuous Delivery/Deployment
+
+Deliverable:
+Briefly describe a strategy for creating a CI-CD pipeline for the API created in earlier tasks.
+
+I've implemented this via AWS CDK ([https://github.com/RizaHKhan/cdk-for-laravel-deployment/blob/master/lib/constructs/pipeline.ts](Link) to a another repository of mine which pushes sets up a Laravel application on an EC2 and has CI/CD).
+
+1. Creates a artifact in S3
+2. Runs tests (theoretically, I didn't write tests in the above example)
+3. Uses AWS agent to write to the EC2 instane
+
