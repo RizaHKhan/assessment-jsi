@@ -8,6 +8,10 @@ const PORT = 3000
 
 const db = new Database()
 
+app.get('/', (req, res) => {
+    res.status(200).send('OK')
+})
+
 app.get('/GetTypes', (req, res) => {
     const types = req.query.types.split(',')
     res.send(db.byTypes(types))
