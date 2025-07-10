@@ -1,9 +1,18 @@
 ###
 
+# @name Health Check
+
+GET {{API_URL}}
+authorization: Bearer 123
+accept: application/json
+content-type: application/json
+
+###
+
 # @name GetTypes
 # @descrition Get the types of data available in the system.
 
-GET http://localhost:3000/GetTypes?types=Emails,Chats,Sms
+GET {{API_URL}}/GetTypes?types=Emails,Chats,Sms
 authorization: Bearer 123
 accept: application/json
 content-type: application/json
